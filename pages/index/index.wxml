@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <button bindtap="bindViewTap">扫码</button>
+  </view>
+  <scroll-view>
+    <text style="margin-bottom:20rpx">{{isbn}}</text>
+    <view class="reslist" wx:for="{{reslist}}" wx:key="*this">
+      <image style="width:{{item.cover.Width}}rpx;height:{{cover.Height}}rpx;margin-bottom:20rpx" src="{{item.cover.URL}}"></image>
+      <view class="abs">
+        <text style="margin-bottom:20rpx">{{item.abs}}</text>
+      </view>
+      <view wx:for="{{item.attr}}" wx:for-item="iis">
+        <text>{{index}} --> </text>
+        <text>{{iis}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
